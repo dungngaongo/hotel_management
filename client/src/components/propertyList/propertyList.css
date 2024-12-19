@@ -1,0 +1,48 @@
+.pList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pListItem {
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pListItem:hover {
+  transform: scale(1.05);
+}
+
+.pListImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.pListTitles {
+  padding: 10px;
+  text-align: center;
+}
+
+.pListTitles h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.pListTitles h2 {
+  font-size: 16px;
+  color: #0071c2;
+  margin: 5px 0;
+}
+
+.pListTitles p {
+  font-size: 14px;
+  color: #666;
+}

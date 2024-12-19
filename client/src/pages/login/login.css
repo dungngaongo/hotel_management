@@ -1,0 +1,94 @@
+/* Tổng quan */
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  background: linear-gradient(135deg, #74ebd5, #9face6); /* Hiệu ứng gradient nền */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container chính */
+.lContainer {
+  width: 100%;
+  max-width: 400px; /* Giới hạn chiều rộng */
+  background-color: #fff; /* Nền trắng */
+  padding: 30px;
+  border-radius: 15px; /* Bo tròn góc */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Khoảng cách giữa các phần tử */
+  align-items: center;
+}
+
+/* Input */
+.lInput {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.lInput:focus {
+  border-color: #74ebd5; /* Đổi màu viền khi focus */
+  box-shadow: 0px 0px 8px rgba(116, 235, 213, 0.4); /* Hiệu ứng ánh sáng */
+}
+
+/* Nút Login */
+.lButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #74ebd5; /* Màu nút */
+  color: #fff; /* Màu chữ */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.lButton:disabled {
+  background-color: #ccc; /* Màu xám khi disabled */
+  cursor: not-allowed;
+}
+
+.lButton:hover:enabled {
+  background-color: #67c9bf; /* Màu nhấn */
+}
+
+/* Hiển thị lỗi */
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* Responsive - màn hình nhỏ */
+@media (max-width: 768px) {
+  .lContainer {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .lButton {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .lInput {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

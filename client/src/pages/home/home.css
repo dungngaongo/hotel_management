@@ -1,0 +1,17 @@
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;  /* Thêm padding để tránh các phần tử bị dính vào các cạnh màn hình */
+}
+
+.homeTitle {
+  width: 100%;   /* Điều chỉnh width để phù hợp với màn hình nhỏ hơn */
+  max-width: 1024px; /* Đảm bảo tiêu đề không quá rộng */
+  font-size: 24px; /* Tăng kích thước font để nổi bật hơn */
+  font-weight: bold; /* Làm nổi bật tiêu đề */
+  text-align: left;  /* Căn giữa tiêu đề */
+  color: #333;  /* Màu chữ tối hơn cho dễ đọc */
+}

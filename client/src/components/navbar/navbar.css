@@ -1,0 +1,83 @@
+/* Tổng quan chung cho navbar */
+.navbar {
+  width: 100%;
+  background-color: #f21f14d8; /* Màu nền tối */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between; /* Căn hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 10px 20px; /* Khoảng cách padding */
+  max-width: 1200px;
+  margin: 0 auto; /* Căn giữa nội dung */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm */
+  color: #ecf0f1; /* Màu chữ sáng */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+  color: #f39c12; /* Đổi màu khi hover */
+  transform: scale(1.1); /* Hiệu ứng phóng to */
+}
+
+/* Các nút điều hướng */
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Khoảng cách giữa các nút */
+}
+
+.navButton {
+  background-color: #f39c12; /* Màu nền nút */
+  color: #fff; /* Màu chữ */
+  border: none;
+  border-radius: 20px; /* Bo tròn nút */
+  padding: 8px 16px; /* Kích thước nút */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: #d35400; /* Đổi màu khi hover */
+  transform: translateY(-2px); /* Hiệu ứng nhấn nổi */
+}
+
+.navUsername {
+  color: #ecf0f1; /* Màu chữ sáng */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Điều chỉnh trên màn hình nhỏ */
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column; /* Xếp chồng các phần tử */
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px; /* Thu nhỏ logo */
+  }
+
+  .navItems {
+    gap: 10px; /* Giảm khoảng cách giữa các nút */
+  }
+
+  .navButton {
+    padding: 6px 12px; /* Giảm kích thước nút */
+    font-size: 14px;
+  }
+}

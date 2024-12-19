@@ -1,0 +1,104 @@
+/* Toàn bộ modal đặt phòng */
+.reserve {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container chính của modal */
+.rContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+/* Nút đóng modal */
+.rClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: gray;
+  cursor: pointer;
+}
+
+/* Phần chọn phòng */
+.roomSelection {
+  margin-top: 20px;
+}
+
+.roomItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.roomCheckbox {
+  width: 20px;
+  height: 20px;
+}
+
+.roomLabel {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Phần tóm tắt đơn đặt phòng */
+.reservationSummary {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+/* Phần hiển thị lỗi nếu có */
+.reservationError {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Các nút đặt phòng và hủy */
+.reservationButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.reservationButton, .reservationCancelButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.reservationButton {
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+}
+
+.reservationCancelButton {
+  background-color: #d9534f;
+  color: white;
+  font-weight: bold;
+}
+
+.reservationButton:hover, .reservationCancelButton:hover {
+  opacity: 0.9;
+}

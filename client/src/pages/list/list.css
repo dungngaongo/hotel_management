@@ -1,0 +1,243 @@
+.listContainer {
+  display: flex; /* Dùng flexbox */
+  justify-content: space-between; /* Giãn đều các phần */
+  align-items: flex-start; /* Canh trên cùng */
+  gap: 20px; /* Khoảng cách giữa hai cột */
+  padding: 20px;
+  background-color: #f5f5f5; /* Nền nhẹ */
+  width: 70%;
+}
+
+.listSearch {
+  flex: 0.3; /* Chiếm 30% chiều rộng */
+  max-width: 350px; /* Giới hạn chiều rộng tối đa */
+  background-color: #febb02; /* Màu vàng nền */
+  padding: 20px;
+  border-radius: 10px; /* Bo tròn góc */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Khoảng cách giữa các phần tử */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  height: 570px;
+}
+
+.listResult {
+  flex: 0.7; /* Chiếm 70% chiều rộng */
+  display: flex;
+  flex-direction: column; /* Danh sách hiển thị theo chiều dọc */
+  gap: 20px; /* Khoảng cách giữa các phòng */
+}
+
+.lsTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lsItem label {
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+}
+
+.lsItem input,
+.lsItem span {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.lsItem input {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.lsItem span {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.lsOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+}
+
+.lsOptionText {
+  font-size: 14px;
+  color: #555;
+  flex: 1;
+}
+
+.lsOptionInput {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #005ea6; 
+}
+
+.listWrapper {
+  display: flex;
+  width: 100%; 
+  justify-content: space-between; 
+}
+
+/* Container của lịch */
+.datePicker {
+  position: absolute;
+  top: 100%; /* Hiển thị lịch ngay bên dưới ô input */
+  left: 0;
+  z-index: 1000;
+  width: 100%; /* Chiều rộng bằng phần container */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Tùy chỉnh wrapper chứa ô input ngày */
+.rdrDateDisplayWrapper {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa các ô */
+  padding: 10px;
+  background-color: #fff; /* Màu nền */
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px 10px 0 0; /* Bo tròn góc trên */
+}
+
+/* Tùy chỉnh ô input ngày */
+.rdrDateDisplayItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%; /* Cân chỉnh chiều rộng mỗi ô */
+  height: 45px; /* Chiều cao cố định */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  font-weight: bold;
+  color: #333;
+}
+
+.rdrDateDisplayItem:hover {
+  border-color: #febb02; /* Màu viền khi hover */
+}
+
+/* Ẩn border thừa nếu có */
+.rdrDateDisplay {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+/* Chỉnh padding chữ trong ô input */
+.rdrDateDisplayItem input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background: transparent;
+}
+
+
+/* Căn chỉnh tháng và năm trên lịch */
+.rdrMonthAndYearWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Căn chỉnh từng tháng */
+.rdrMonth {
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Ngày trong lịch */
+.rdrDay {
+  border-radius: 50%; /* Bo tròn ngày */
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Số ngày */
+.rdrDayNumber span {
+  font-weight: bold;
+  color: #333; /* Màu mặc định */
+  position: relative;
+  z-index: 2; /* Đẩy số lên trên */
+  transition: color 0.3s ease;
+}
+
+/* Nền hover */
+.rdrDay:hover {
+  background-color: #febb02 !important; /* Nền vàng khi hover */
+}
+
+.rdrDay:hover .rdrDayNumber span {
+  color: #fff !important; /* Chữ trắng khi hover */
+}
+
+/* Ngày được chọn */
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
+  background-color: #febb02 !important; /* Màu vàng cho ngày chọn */
+}
+
+.rdrDayStartPreview .rdrDayNumber span,
+.rdrDayInPreview .rdrDayNumber span,
+.rdrDayEndPreview .rdrDayNumber span {
+  color: #fff !important; /* Chữ trắng cho ngày chọn */
+}
+
+/* Ngày hôm nay */
+.rdrDayToday .rdrDayNumber span {
+  color: #0071c2 !important; /* Màu xanh cho ngày hiện tại */
+}
