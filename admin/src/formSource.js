@@ -81,3 +81,60 @@ export const roomInputs = [
     placeholder: "Near the window, nice view",
   },
 ];
+
+export const bookingInputs = [
+  {
+    id: "first_name",
+    label: "First Name",
+    type: "text",
+    placeholder: "Enter First Name",
+  },
+  {
+    id: "last_name",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Enter Last Name",
+  },
+  {
+    id: "email",
+    label: "Email",
+    type: "email",
+    placeholder: "Enter Email",
+  },
+  {
+    id: "phone",
+    label: "Phone",
+    type: "text",
+    placeholder: "Enter Phone Number",
+  },
+  {
+    id: "room_number",
+    label: "Room Number",
+    type: "number",
+    placeholder: "Enter Room Number",
+  },
+  {
+    id: "from_time",
+    label: "Check-in Time",
+    type: "datetime-local",
+    placeholder: "Select Check-in Time",
+  },
+  {
+    id: "to_time",
+    label: "Check-out Time",
+    type: "datetime-local",
+    placeholder: "Select Check-out Time",
+  },
+  {
+    id: "rent_at",
+    label: "Rent At",
+    type: "datetime-local",
+    placeholder: "Auto-generated or Select",
+  },
+  {
+    id: "check_in",
+    label: "Checked In",
+    type: "checkbox",
+    placeholder: "Is Checked In?",
+  },
+];

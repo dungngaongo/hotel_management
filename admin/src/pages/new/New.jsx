@@ -24,10 +24,10 @@ const New = ({ inputs, title }) => {
         data
       );
 
-      const { url } = uploadRes.data;     // providing the url of the cloud where the image get stored. 
+      const { url } = uploadRes.data;    
 
       const newUser = {
-        ...info,          // takes all user information
+        ...info,        
         img: url,
       };
 

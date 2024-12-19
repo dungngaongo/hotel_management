@@ -8,16 +8,13 @@ import { skipAuth } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
-//UPDATE
-router.put("/availability/:id", updateRoomAvailability);           // here id = room number id
+router.put("/availability/:id", updateRoomAvailability);           
 
 router.put("/:id", updateRoom);
-//DELETE
+
 router.delete("/:id", deleteRoom);
-//GET
 
 router.get("/:id", getRoom);
-//GET ALL
 
 router.get("/", getRooms);
 

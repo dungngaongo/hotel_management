@@ -12,12 +12,12 @@ const Datatable = ({columns}) => {
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState();
   const { data, loading, error } = useFetch(`/${path}`);
-  const [openDialog, setOpenDialog] = useState(false); // Trạng thái mở dialog
-  const [selectedRow, setSelectedRow] = useState(null); // Dữ liệu của row được chọn
+  const [openDialog, setOpenDialog] = useState(false); 
+  const [selectedRow, setSelectedRow] = useState(null); 
 
   useEffect(() => {
     setList(data);
-  }, [data]);  // whenever data changes update list
+  }, [data]);
 
   const handleDelete = async (id) => {
     try {
@@ -31,15 +31,15 @@ const Datatable = ({columns}) => {
   };
 
   const getRowId = (row) => {
-    if (path === "users") return row.user_id; // Nếu là bảng user
-    if (path === "rooms") return row.room_number; // Nếu là bảng room
-    return row.id; // Mặc định nếu bảng khác
+    if (path === "bookings") return row.id; 
+    if (path === "users") return row.user_id; 
+    if (path === "rooms") return row.room_number;
   };
 
   const handleEdit = (row) => {
-    const { Room, ...rowWithoutRoom } = row; // Loại bỏ trường "Room"
-    setSelectedRow(rowWithoutRoom); // Lưu thông tin row được chọn
-    setOpenDialog(true); // Mở dialog
+    const { Room, ...rowWithoutRoom } = row; 
+    setSelectedRow(rowWithoutRoom); 
+    setOpenDialog(true);
   };
 
   const actionColumn = [
@@ -52,7 +52,7 @@ const Datatable = ({columns}) => {
           <div className="cellAction">
             <div
               className="viewButton"
-              onClick={() => handleEdit(params.row)} // Mở dialog với row được chọn
+              onClick={() => handleEdit(params.row)} 
             >
               View
             </div>
@@ -76,9 +76,9 @@ const Datatable = ({columns}) => {
           Add New
         </Link>
       </div>
-      <DataGrid                                                   // material UI DataGrid
+      <DataGrid                                                   
         className="datagrid"
-        rows={list || []}                                               // passing data
+        rows={list || []}                                              
         columns={columns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
@@ -92,7 +92,7 @@ const Datatable = ({columns}) => {
           setOpen={setOpenDialog}
           row={selectedRow}
           path={path}
-          setList={setList} // Cập nhật danh sách sau khi chỉnh sửa
+          setList={setList}
         />
       )}
     </div>
